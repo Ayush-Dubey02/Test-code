@@ -1,0 +1,15 @@
+Test Scenario,Steps Performed,Expected Result,Actual Result,Pass/Fail Status,Observations/Bugs Found,Suggested Improvements
+Element Verification - Username,"Inspect login form for Username field","Field should be present, visible, and have placeholder or label","Field is present with id 'username' and visible","Pass","None","Add placeholder text inside the input field"
+Element Verification - Password,"Inspect login form for Password field","Field should be present, visible, and text obfuscated","Field is present with id 'password' and characters are hidden","Pass","None","Add an eye icon toggle to show/hide password"
+Element Verification - Submit Button,"Inspect login form for Submit button","Button should be present and clickable","Button is present with id 'submit' and clickable","Pass","None","None"
+Positive Login Flow,"1. Enter 'student' in username
+2. Enter 'Password123' in password
+3. Click 'Submit'","System should authenticate user and redirect to '/logged-in-successfully/' with success message","User is authenticated and redirected successfully. Message 'Logged In Successfully' is displayed","Pass","None","None"
+Logout Verification,"Click 'Log out' button on the success page","User should be logged out and redirected back to login page","User is redirected back to login page and session ends","Pass","None","None"
+Negative Login - Invalid User,"1. Enter 'student123' in username
+2. Enter 'Password123' in password
+3. Click 'Submit'","Login should fail and display 'Your username is invalid!'","Login fails and validation message 'Your username is invalid!' is displayed","Pass","None","None"
+Negative Login - Invalid Password,"1. Enter 'student' in username
+2. Enter 'WrongPassword' in password
+3. Click 'Submit'","Login should fail and display 'Your password is invalid!'","Login fails and validation message 'Your password is invalid!' is displayed","Pass","None","None"
+Console & Network Errors,"Monitor browser devtools console and network tab during login flow","No 4xx/5xx network errors or JavaScript console errors should occur","No errors or broken elements detected during the execution","Pass","None","None"

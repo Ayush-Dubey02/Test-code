@@ -23,8 +23,10 @@ test ('Oneflow Login Page',async({page})=>{
     await Oneflowlogin.onelog('sagar.raut@addnectar.com', 'Add@2025');
 });
 
+
 test ('unilow Login page',async({page})=>{
     const uniflowlogin = new Uniflowpom(page);
     await uniflowlogin.gotourl();
     await uniflowlogin.Loginfn('11816','Ayush@1234');
+    await page.pause();
 });
